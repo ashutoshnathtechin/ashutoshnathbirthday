@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Welcome Overlay and Audio Logic
+    const welcomeOverlay = document.getElementById('welcome-overlay');
+    const bdayAudio = document.getElementById('bday-audio');
+    
+    if (welcomeOverlay && bdayAudio) {
+        welcomeOverlay.addEventListener('click', () => {
+            // Attempt to play audio
+            bdayAudio.play().catch(e => console.log("Audio play failed: ", e));
+            
+            // Fade out and remove overlay
+            welcomeOverlay.style.opacity = '0';
+            setTimeout(() => {
+                welcomeOverlay.style.display = 'none';
+            }, 1000);
+        });
+    }
+
     // Intersection Observer for scroll animations
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

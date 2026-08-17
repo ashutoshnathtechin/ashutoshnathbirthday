@@ -19,10 +19,38 @@
 
 body {
     font-family: var(--font-body);
-    color: var(--text-color);
     background-color: var(--bg-color);
-    line-height: 1.6;
+    color: var(--text-color);
     overflow-x: hidden;
+}
+
+/* Welcome Overlay */
+#welcome-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 249, 250, 0.95);
+    backdrop-filter: blur(15px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 1s ease;
+    cursor: pointer;
+}
+
+.welcome-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    animation: pulseGlow 2s infinite alternate;
+}
+
+.welcome-content p {
+    font-size: 1.5rem;
+    color: #666;
+    font-style: italic;
 }
 
 /* Typography */
@@ -51,7 +79,8 @@ p {
 .hero {
     position: relative;
     height: 100vh;
-    min-height: 600px;
+    min-height: 700px; /* Increased min-height to account for padding */
+    padding-top: 120px; /* Added padding to prevent overlap with navbar */
     background-image: url('images/hero.jpg');
     background-size: cover;
     background-position: center;
