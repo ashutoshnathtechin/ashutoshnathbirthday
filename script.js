@@ -135,7 +135,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const floatingMsg = document.getElementById('floating-msg');
 
     if (btnNo) {
-        btnNo.addEventListener('mouseover', () => {
+        const jumpNoButton = (e) => {
+            if (e) e.preventDefault(); // Prevent default touch/click behavior
             // Move the button to a random position
             const x = Math.random() * (window.innerWidth - btnNo.offsetWidth - 100);
             const y = Math.random() * (window.innerHeight - btnNo.offsetHeight - 100);
@@ -146,7 +147,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Show floating message
             floatingMsg.classList.remove('hidden');
-        });
+        };
+
+        btnNo.addEventListener('mouseover', jumpNoButton);
+        btnNo.addEventListener('touchstart', jumpNoButton, { passive: false });
+        btnNo.addEventListener('click', jumpNoButton);
     }
 
     if (btnYes) {
