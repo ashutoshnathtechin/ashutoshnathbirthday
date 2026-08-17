@@ -8,18 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Welcome Screen / Music Autoplay Enabler -->
-    <div id="welcome-overlay">
-        <div class="welcome-content">
-            <h1>Tap to open your surprise 🎁</h1>
-            <p>Turn up your volume! 🎵</p>
-        </div>
-    </div>
-    
-    <!-- Audio Element (Needs a bday.mp3 file in the same folder) -->
-    <audio id="bday-audio" loop>
-        <source src="bday.mp3" type="audio/mpeg">
-    </audio>
 
     <!-- Hero Section -->
     <header class="hero">
@@ -52,13 +40,15 @@
                 <div class="hero-divider fade-in-up delay-2"></div>
                 
                 <!-- Rotating Birthday Quotes -->
-                <div class="quote-container fade-in-up delay-2">
-                    <div class="quote-mark">"</div>
-                    <div class="quotes-slider">
-                        <p class="quote active">You are my today and all of my tomorrows. 💖</p>
-                        <p class="quote">Every moment with you is a pure blessing. ✨</p>
-                        <p class="quote">26 years of you making the world brighter! 🌍</p>
-                        <p class="quote">Happy Birthday to my favorite person ever. 🥺</p>
+                <div class="quote-wrapper fade-in-up delay-2">
+                    <div class="quote-container" style="max-width: 550px;">
+                        <div class="quote-mark">"</div>
+                        <div class="quotes-slider">
+                            <p class="quote active">You are my today and all of my tomorrows. 💖</p>
+                            <p class="quote">Every moment with you is a pure blessing. ✨</p>
+                            <p class="quote">26 years of you making the world brighter! 🌍</p>
+                            <p class="quote">Happy Birthday to my favorite person ever. 🥺</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,7 +78,7 @@
             <div class="split-layout">
                 <div class="image-container slide-in-left">
                     <!-- Replace couple.jpg with your real photo -->
-                    <img src="images/couple.jpg" alt="Our beautiful moment together" class="couple-photo">
+                    <img src="images/xyz1.jpeg" alt="Our beautiful moment together" class="couple-photo">
                     <div class="photo-frame-decor"></div>
                 </div>
                 <div class="text-container slide-in-right">

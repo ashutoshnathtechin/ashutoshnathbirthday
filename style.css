@@ -24,34 +24,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Welcome Overlay */
-#welcome-overlay {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(255, 249, 250, 0.95);
-    backdrop-filter: blur(15px);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: opacity 1s ease;
-    cursor: pointer;
-}
 
-.welcome-content h1 {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    animation: pulseGlow 2s infinite alternate;
-}
-
-.welcome-content p {
-    font-size: 1.5rem;
-    color: #666;
-    font-style: italic;
-}
 
 /* Typography */
 h1, h2, h3 {
@@ -354,7 +327,16 @@ p {
     border-radius: 2px;
 }
 
-/* Quote Slider */
+/* Quote Slider & Mini Photo */
+.quote-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+
 .quote-container {
     position: relative;
     max-width: 450px;
